@@ -1,0 +1,65 @@
+html{
+    background: linear-gradient(45deg, green, lightblue);
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+.main-div{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+.second-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+h1{
+    font-size: 60px;
+    
+    line-height: 0px;
+}
+.sunday{
+    font-weight: bold;
+    line-height: 0;
+}
+.day{
+    background-color: white;
+    border-radius: 10px;
+    height: 150px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 20px;
+}
+.year{
+    background-color: orangered;
+    border-radius: 10px;
+    height: 150px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.june{
+   line-height: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.last{
+    line-height: 0;
+}

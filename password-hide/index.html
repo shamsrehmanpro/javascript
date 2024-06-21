@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="HTML" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8a3cfe6662.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="mode">
+            <button class="light">light mode</button>
+        <i class="fa-solid fa-moon"></i>
+        <!-- <i class="fa-solid fa-sun"></i> -->
+        </div>
+        
+        
+        <div class="input-value">
+        <input type="password" name="" id="">
+        <img src="./eye-close.png" class="eye-open" alt="" srcset="">
+        </div>
+
+    </div>
+    
+    
+
+
+<script>
+    const inputField = document.querySelector('input');
+    const img = document.querySelector('img');
+    const button = document.querySelector('button');
+    const modeImg = document.querySelector('i');
+    const wholeDocument = document.querySelector('.HTML');
+
+
+    modeImg.addEventListener('click', function(){
+        if (modeImg.classList.contains('fa-moon')) {
+            
+            wholeDocument.classList.add('light-body');
+            wholeDocument.classList.remove('dark-body');
+            button.classList.remove('light');
+            button.classList.add('dark');
+            modeImg.classList.remove('fa-moon');
+            modeImg.classList.add('fa-sun');
+        }
+        else if (modeImg.classList.contains('fa-sun')) {
+            
+            wholeDocument.classList.add('dark-body');
+            wholeDocument.classList.remove('light-body');
+            button.classList.add('light');
+            button.classList.remove('dark');
+            modeImg.classList.remove('fa-sun');
+            modeImg.classList.add('fa-moon');
+        } 
+    });
+
+
+
+    img.addEventListener('click', function(){
+       if (inputField.type === 'password') {
+        inputField.type = 'text';
+         img.src = './eye-open.png';
+         img.classList.remove('eye-open');
+         img.classList.add('eye-close');
+
+
+       }
+       else{
+        inputField.type = 'password';
+        img.src = './eye-close.png';
+        img.classList.add('eye-open');
+        img.classList.remove('eye-close');
+       }
+    });
+
+
+
+
+
+</script>
+</body>
+</html>

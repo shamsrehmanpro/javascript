@@ -1,0 +1,70 @@
+html{
+    background-color: grey;
+}
+.main-div{
+    
+    background-color: rgb(181, 210, 236);
+    border-radius: 10px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+
+
+p{
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+}
+input{
+    padding: 15px 50px 15px 50px;
+    margin-left: 30px;
+    margin-right: 40px;
+    margin-top: 0px;
+    border-radius: 10px;
+    display: block;
+}
+img{
+    padding: 20px 20px 0px 10px;
+}
+.img-div{
+    display: none;
+    text-align: center;
+    
+}
+
+button{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(81, 81, 240);
+    margin-bottom: 40px;
+    color: white;
+    font-size: 20px;
+}
+@keyframes shake {
+    0% {
+     transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    75% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(2px);
+    }
+  }
+  
+  .err {
+    animation: shake 0.2s ease-in-out 0s 2;
+  }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="main-div">
+    <div class="head">
+        <h1>Text To Speech <span>Converter</span></h1>
+        <p contenteditable="true"></p>
+    </div>
+    <div class="below">
+        <select class="btn2">Google English Uk movie <img src="./dropdown.png" alt="" srcset=""></select>
+        <button class="btn1"><img src="./play.png" alt="" srcset="">Listen</button>
+    </div>
+    
+</div>
+
+
+<script>
+    const p = document.querySelector('p');
+    const play = document.querySelector('.btn1');
+    const list = document.querySelector('.btn2');
+    var synth = window.speechSynthesis;
+        var voices = [];
+
+        PopulateVoices();
+        if(speechSynthesis !== undefined){
+            speechSynthesis.onvoiceschanged = PopulateVoices;
+        }
+
+
+    play.addEventListener('click', function(){
+        var toSpeak= new SpeechSynthesisUtterance(p.textContent);
+        var selectedVoiceName = list.selectedOptions[0].getAttribute('data-name');
+        voices.forEach((voice) => {
+                if (voice.name === selectedVoiceName) {
+                  toSpeak.voice = voice;
+                }
+            });
+            synth.speak(toSpeak);
+
+    });
+
+    function PopulateVoices(){
+            voices = synth.getVoices();
+            var selectedIndex = list.selectedIndex < 0 ? 0 : list.selectedIndex;
+            voices.forEach((voice) => {
+                var listItem = document.createElement('option');
+                listItem.textContent = voice.name;
+                listItem.setAttribute('data-lang', voice.lang);
+                listItem.setAttribute('data-name', voice.name);
+                list.appendChild(listItem);
+            });
+            list.selectedIndex = selectedIndex;
+    }
+</script>
+
+</body>
+</html>

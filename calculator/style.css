@@ -1,0 +1,57 @@
+html{
+    background-color: lightcyan;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    height: 100%;
+}
+.main-div{
+    background-color: black;
+    width: 300px;
+    height: 430px;
+    border-radius: 10px;
+    
+}
+.input-area{
+    padding: 0;
+    margin: 0;
+}
+input{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 65px;
+    padding-bottom: 15px;
+    text-align: right;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    border: 0;
+    outline: none;
+}
+.row1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+p{
+    width: 60px;
+    height: 50px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.grows{
+    width: 135px;
+}

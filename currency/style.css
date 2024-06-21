@@ -1,0 +1,95 @@
+html{
+    height: 100%;
+    width: 100%;
+    background: url('./background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+.top-container{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.buttons{
+    width: 5%;
+}
+button{
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+}
+.top-container img{
+    width: 50px;
+    height: 50px;
+}
+.heading{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+.center-div{
+   display: flex;
+   flex-direction: column;
+   margin-left: 15%;
+   width: 400px;
+   height: 100%;
+}
+h1{
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0;
+   
+    padding-bottom: 0;
+}
+h1 span{
+    color: orange;
+    line-height: none;
+   
+}
+.center-div p{
+    color: white;
+    line-height: none;
+}
+.center-div button{
+    background-color: orange;
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    width: 50%;
+}
+.bitcoin img{
+    width: 50px;
+    height: 50px;
+}
+.bitcoin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+    gap: 10px;
+    border: 2px solid white;
+    width: 150px;
+    border-radius: 20px;
+}
+.bt-name{
+    color: orange;
+    font-weight: bold;
+}
+.currency{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 50px;
+    font-weight: bold;
+    padding-left: 15%;
+    margin-left: 15%;
+}

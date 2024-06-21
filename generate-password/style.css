@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(1, 44, 44);
+}
+.main-div{
+    margin: 250px 0px 0px 160px;
+    font-family: sans-serif;
+}
+h1{
+    color: white;
+    line-height: 50px;
+}
+h1 span{
+    color: green;
+    text-decoration: underline;
+}
+input{
+    padding: 20px 250px 20px 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    
+}
+input[type="text"] {
+    padding-left: 20px;
+}
+.input{
+    display: flex;
+    align-items: center;
+}
+.fa-copy{
+    font-size: 40px;
+    color: green;
+    margin-left: -50px;
+    cursor: pointer;
+}
+.button{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+button{
+    padding: 10px 30px 10px 30px;
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    
+}
+.fa-bolt{
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    margin-left: 5px;
+}

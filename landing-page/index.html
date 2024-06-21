@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-div">
+        <h2>DeltaVi</h2>
+        <div class="second-div">
+            <p>Website is under maintaince</p>
+            <h1>We're <span class="l">Launching  </span>soon !</h1>
+            <div class="timer">
+                <div class="div-p">
+                    <p class="days digits">24</p>
+                    <p class="days">days</p>
+                </div>
+
+                <div class="div-p">
+                    <p class="hours digits">24</p>
+                    <p class="days">hour</p>
+                </div>
+
+                <div class="div-p">
+                    <p class=" minutes digits">24</p>
+                    <p class="days">minutes</p>
+                </div>
+
+                <div class="div-p">
+                    <p class=" seconds digits">24</p>
+                    <p class="days">seconds</p>
+                </div>
+                
+                
+            </div>
+            <button>Learn More <img src="./triangle.png" alt="" srcset=""></button>
+        </div>
+        <span><img src="./rocket.png" alt="" srcset=""></span>
+    </div>
+    
+    <script>
+        let days = document.querySelector('.days');
+        let hours = document.querySelector('.hours');
+        let minutes = document.querySelector('.minutes');
+        let seconds = document.querySelector('.seconds');
+
+        var countDownDate = new Date("Oct, 16 2024 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            
+            var day = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minute = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var second = Math.floor((distance % (1000 * 60)) / 1000);
+
+            days.innerHTML = day;
+             hours.innerHTML = hour;
+             minutes.innerHTML = minute;
+             seconds.innerHTML = second;
+
+             if (distance < 0) {
+                clearInterval(x);
+                days.innerHTML = '00';
+             hours.innerHTML = '00';
+             minutes.innerHTML = '00';
+             seconds.innerHTML = '00';
+             }
+
+        }, 1000);
+
+        // let day = 20;
+        // let hour = 10;
+        // let minute = 48;
+        // let second = 60;
+        // let counter = 0;
+
+        // function timeReduce(){
+        //     counter++;
+        //     if (counter === 100) {
+        //         second--;
+        //         counter = 0;
+        //     }
+        //     if (second === 0 ) {
+        //         minute--;
+        //         second = 60;
+        //     }
+        //     if (minute === 0) {
+        //         hour--;
+        //         minute = 48;
+        //         second = 60;
+
+        //     }
+        //     if (hour === 0){
+        //         day--;
+        //         hour = 0;
+        //         minute = 48;
+        //         second = 60;
+        //     } 
+        //     if( day === 0){
+        //         day = 0;
+        //         hour = 0;
+        //         minute = 0;
+        //         second = 0;
+        //     }
+        //     days.innerHTML = day;
+        //     hours.innerHTML = hour;
+        //     minutes.innerHTML = minute;
+        //     seconds.innerHTML = second;
+            
+        //     setTimeout(timeReduce, 1);
+        // }
+
+        // timeReduce();
+
+    </script>
+</body>
+</html>

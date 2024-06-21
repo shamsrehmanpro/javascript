@@ -1,0 +1,85 @@
+html{
+    background-color: darkgray;
+}
+.buttons{
+    margin-top: 50px;
+    margin-left: 30px;
+    display: flex;
+    gap: 15px;
+}
+button{
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(146, 135, 135);
+    color: white;
+    font-size: 20px;
+}
+p{
+    background-color: white;
+    width: 300px;
+    height: 100px;
+    position: relative;
+    -webkit-animation: remove 5s forwards;
+}
+@-webkit-keyframes remove{
+    100%{
+        visibility: hidden;
+    }
+}
+.toast-box{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: end;
+    bottom: 0;
+    position: absolute;
+    right: 10px;
+    
+    transform: translateX(100%);
+    animation: slide 0.5s linear forwards;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(100%);
+    }
+   to{
+        transform: translateX(0);
+    }
+    
+}
+p::after{
+    content: '';
+    background-color: green;
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    animation: remove-background 5s forwards;
+}
+
+@keyframes remove-background {
+    100%{
+        width: 0;
+    }
+    
+}
+
+
+p.error::after{
+    content: '';
+    background-color: red;
+    position: absolute;
+}
+p.invalid::after{
+    content: '';
+    background-color: yellow;
+    position: absolute;
+}
+
+span{
+    right: 10px;
+    position: absolute;
+}

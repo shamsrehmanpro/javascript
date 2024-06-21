@@ -1,0 +1,130 @@
+html{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(31, 97, 97);
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.img-heading{
+    width: 300px;
+    height: 450px;
+    background-color: black;
+    position: relative;
+    box-shadow: -25px -8px 25px 15px lightblue;
+    
+}
+img{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    z-index: 999;
+    padding: 20px;
+
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+.active{
+    background-color: rgb(52, 52, 158);
+}
+.buttons button{
+    border-radius: 50%;
+    height: 20px;
+    border-color: none;
+    outline: none;
+}
+.detail-img{
+    font-family: sans-serif;
+    width: 300px;
+    height: 410px;
+    background-color: wheat;
+    padding-left: 30px;
+    padding-right: 30px;
+   
+}
+h1{
+    font-weight: bolder;
+    line-height: 10px;
+}
+.percent{
+    font-weight: bold;
+    color: green;
+    line-height: 0;
+}
+.sizes{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.size{
+    width: 70px;
+}
+.active-size{
+    color: blue;
+}
+.colors{
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+}
+.color{
+    width: 70px;
+}
+input[type=radio]#green{
+    accent-color: green;
+    background-color: pink;
+}
+input[type=radio]#blue{
+    accent-color: blue;
+}
+
+input[type=radio]#pink{
+    accent-color: red;
+}
+
+input[type=radio]#yellow{
+    accent-color: purple;
+}
+.quantities{
+    font-weight: bold;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+input[type=number]{
+    width: 60px;
+    height: 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: lightgray;
+    padding-left: 10px;
+
+}
+.buy{
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    background-color: blue;
+    padding: 5px 100px 5px 100px;
+    display: flex;
+    align-items: center;
+}
+

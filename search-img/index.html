@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Image Search Engine</h1>
+        <div class="input-div">
+            <input type="search" name="" id="" placeholder="search anything">
+            <button type="button">Search Image</button>
+        </div>
+    </div>
+
+    <div class="images-container">
+
+    </div>
+    <button class="show-more">Show More</button>
+
+    <script>
+
+        const searchBar = document.querySelector('input');
+        const submit = document.querySelector('button');
+        const imagesContainer = document.querySelector('.images-container');
+        const showButton = document.querySelector('.show-more');
+        let keyword = '';
+        let page = 1;
+
+        async function searchImages(){
+            keyword = searchBar.value;
+            const url = "https://api.unsplash.com/search/photos?page=" + page + "&query=" + keyword + "&client_id=ovSMqquEnb3BVfR57o9t80qvIloYxBb0Js5n5E8Un8g&per_page=12"
+            const response = await fetch(url);
+            const data = await response.json();
+            const results = data.results;
+                console.log(results);
+            results.map((result) => {
+                const image = document.createElement('img');
+                image.src = result.urls.small;
+                imagesContainer.appendChild(image);
+            })
+            showButton.style.display = 'block';
+        }
+
+        submit.addEventListener('click', function(e){
+            page = 1;
+            searchImages();
+        });
+
+        showButton.addEventListener('click', function(){
+            page++;
+            searchImages();
+        });
+    </script>
+    
+</body>
+</html>

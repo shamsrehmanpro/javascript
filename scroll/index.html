@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <span><img class="left-img" src="./images/back.png" alt="" srcset=""></span>
+
+        <div class="second-div">
+            <div>
+               <div> <img src="./images/image-1.png" alt="" srcset=""> </div>
+               <div> <img src="./images/image-2.png" alt="" srcset=""> </div>
+               <div> <img src="./images/image-3.png" alt="" srcset=""> </div>
+            </div>
+            <div>
+               <div> <img src="./images/image-4.png" alt="" srcset=""> </div>
+               <div> <img src="./images/image-5.png" alt="" srcset=""> </div>
+               <div> <img src="./images/image-6.png" alt="" srcset=""> </div>
+            </div>
+           
+        </div>
+
+        <span><img class="right-img" src="./images/back.png" alt="" srcset=""></span>
+
+    </div>
+    
+    
+   <script>
+    const leftButton = document.querySelector('.left-img');
+    const rightButton = document.querySelector('.right-img');
+    const images = document.querySelector('.second-div');
+
+    leftButton.addEventListener('click', function(){
+        images.style.scrollBehavior = 'smooth';
+        images.scrollLeft += 950;
+    });
+
+    rightButton.addEventListener('click', function(){
+        images.style.scrollBehavior = 'smooth';
+        images.scrollLeft -= 950;
+    });
+   </script>
+
+
+</body>
+</html> 
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-div">
+        <span><img class="left-img" src="./images/next.png" alt="" srcset=""></span>
+
+        <div class="main-second">
+            <div>
+                <div class="img1"><img src="./images/image-1.png" alt="" srcset=""></div>
+                <div class="img1"><img src="./images/image-2.png" alt="" srcset=""></div>
+                <div class="img1"><img src="./images/image-3.png" alt="" srcset=""></div>
+            </div>
+            <div>
+                <div class="img1"><img src="./images/image-4.png" alt="" srcset=""></div>
+                <div class="img1"><img src="./images/image-5.png" alt="" srcset=""></div>
+                <div class="img1"><img src="./images/image-6.png" alt="" srcset=""></div>
+            </div>
+        </div>
+    
+        <span><img class="right-img"  src="./images/next.png" alt="" srcset=""></span>
+    </div>
+    
+
+    <script>
+        const scrollLeft = document.querySelector('.left-img');
+        const scrollRight = document.querySelector('.right-img');
+        let mainDiv = document.querySelector('.main-second');
+        
+        scrollLeft.addEventListener('click', function(a) {
+           
+            mainDiv.scrollBehavior = 'smooth';
+            mainDiv.scrollLeft += 900;
+        });
+
+        scrollRight.addEventListener('click', function(a){
+            
+            mainDiv.style.scrollBehavior = 'smooth';
+            mainDiv.scrollLeft -= 900;
+        });
+    </script>
+</body>
+</html>  -->

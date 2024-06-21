@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="main-div">
+        <div class="second">
+        <input type="password" placeholder="Enter password" name="" id="">
+        <img src="./arrow.png" alt="" srcset="">
+        </div>
+        <p></p>
+    </div>
+        
+    <script>
+        const input = document.querySelector('input');
+        const button = document.querySelector('img');
+        const p = document.querySelector('p');
+
+        input.addEventListener('input', function(){
+            if (input.value.length === 0) {
+                p.innerHTML = '';
+                p.style.color = '';
+                input.style.borderColor = 'black';
+            }
+           else if (input.value.length < 3) {
+                p.innerHTML = 'Your password is weak';
+                p.style.color = 'red';
+                input.style.borderColor = 'red';
+            }
+            else if (input.value.length > 3 && input.value.length < 7) {
+                
+                p.innerHTML = 'Your password is medium';
+                p.style.color = 'yellow';
+                input.style.borderColor = 'yellow';
+            }
+            else if (input.value.length > 7 ) {
+                
+                p.innerHTML = 'Your password is strong';
+                p.style.color = 'green';
+                input.style.borderColor = 'green';
+            }
+        });
+
+    </script>
+</body>
+</html>

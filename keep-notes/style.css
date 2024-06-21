@@ -1,0 +1,63 @@
+html{
+    background: linear-gradient(rgb(117, 169, 230), rgb(170, 218, 235));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.main-div{
+    margin: 50px 0px 0px 50px;
+}
+.notes-pic{
+   margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.notes-pic img{
+    width: 70px;
+}
+h1{
+    font-family: sans-serif;
+    color: aliceblue;
+}
+button{
+    padding: 10px 50px 10px 50px;
+    color: white;
+    background-color: rgb(147, 72, 216);
+    border-radius: 20px;
+    font-size: 20px;
+}
+.button-div img{
+    position: absolute;
+    width: 20px;
+    padding-left: 20px;
+}
+.button-div{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.white-area{
+    width: 100%;
+    max-width: 400px;
+    min-height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    margin-left: 50px;
+    padding: 20px;
+    position: relative;
+    outline: none;
+}
+
+
+.delete-img{
+    width: 30px;
+    height: 30px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}

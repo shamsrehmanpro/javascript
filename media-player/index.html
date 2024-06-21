@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8a3cfe6662.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container main-div">
+       <div class="upper">
+        <i class="fa-solid fa-chevron-left"></i>
+        <i class="fa-solid fa-bars"></i>
+       </div>
+
+       <div class="img-div">
+        <img src="pic.png" alt="" srcset="">
+       </div>
+
+       <div class="song-name">
+        <h1>Sidu Mossa Ala</h1>
+        <p>Teri yad ati hai it by own</p>
+       </div>
+       <audio  class="songs">
+        <source src="song.mp3" type="audio/mpeg">
+       </audio>
+        <div class="controls">
+        <input type="range" value="0" class="rangebtn">
+        </div>
+
+        <div class="below">
+            <i class="fa-solid fa-backward below-btn"></i>
+            <i  class="fa-solid fa-play below-btn"></i>
+            <i class="fa-solid fa-forward below-btn"></i>
+        </div>
+    </div>
+
+    <script>
+
+        let song = document.querySelector('.songs');
+        let progress = document.querySelector('.rangebtn');
+        let controlBtn = document.querySelector('.fa-play');
+console.log(song);
+
+        // song.onloadmetadata =  function(){
+        //     progress.max = song.duration;
+        //     progress.value = song.currentTime;
+        // }
+        
+
+        function playPause(){
+            if (controlBtn.classList.contains('fa-pause')) {
+                song.pause();
+                controlBtn.classList.remove('fa-pause');
+                controlBtn.classList.add('fa-play');
+            }
+            else{
+                song.play();
+                controlBtn.classList.remove('fa-play');
+                controlBtn.classList.add('fa-pause');
+            }
+        }
+      if (song.play()){
+        setInterval(() => {
+            progress.value = song.currentTime;
+        }, 500);
+      }
+        progress.onchange = function(){
+         song.play();
+         song.currentTime = progress.value;
+         controlBtn.classList.remove('fa-play');
+         controlBtn.classList.add('fa-pause');   
+        }
+
+        controlBtn.addEventListener('click', function(){
+            playPause();
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-container">
+
+        <div class="heading">
+            <p><img src="./logo.png" alt="" srcset=""></p>
+            <p>Market</p>
+            <p>Featured</p>
+            <p>White Paper</p>
+            <p class="about">About Us</p>
+        </div>
+        <div class="buttons">
+            <button>EN</button>
+        </div>
+        
+    </div>
+
+
+    <div class="center-div">
+        <h1>Buy & Sell <span>Crypto</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Fugit nobis commodi deserunt, ab adipisci itaque.</p>
+        <button>Explore More</button>
+    </div>
+
+    <div class="currency">
+        <div class="bitcoin">
+            <img src="./bitcoin.png" alt="" srcset="">
+            <div class="bitcoin-detail">
+                <p class="dollar">$33</p>
+                <p class="bt-name">BitCoin</p>
+            </div>
+        </div>
+
+        <div class="bitcoin">
+            <img src="./ethereum.png" alt="" srcset="">
+            <div class="bitcoin-detail">
+                <p class="ethereum">$33</p>
+                <p class="bt-name">BitCoin</p>
+            </div>
+        </div>
+        
+        <div class="bitcoin">
+            <img src="./dogecoin.png" alt="" srcset="">
+            <div class="bitcoin-detail">
+                <p class="dog">$33</p>
+                <p class="bt-name">BitCoin</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        const dollar = document.querySelector('.dollar');
+        const ethereum = document.querySelector('.ethereum');
+        const dog = document.querySelector('.dog');
+
+
+        const apiKey = 'coinrankingf282cda058367ac8e814850ce66d0811e4667580fca77e04';
+
+        const options = {
+  headers: {
+    'Content-Type': 'application/json',
+    'x-access-token': apiKey
+  },
+};
+
+
+
+fetch('https://api.coinranking.com/v2/coins', options)
+  .then((response) => response.json())
+  .then((result) => {
+    console.log(result);
+    dollarfloor = result.data.coins[0].price;
+    dollar.innerHTML = Math.floor(dollarfloor);
+    ethereumfloor = result.data.coins[1].price;
+    ethereum.innerHTML = Math.floor(ethereumfloor);
+    dogfloor = result.data.coins[4].price;
+    dog.innerHTML = Math.floor(dogfloor);
+});
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-div">
+
+        <div class="options">
+        <span class="option-p">Select give Menu</span>
+        <img class="option-img" src="./SelectMenu_Img/arrow.png" alt="" srcset="">
+        </div>
+
+
+        <div class="below">
+            <p class="facebook"><img src="./SelectMenu_Img/facebook.png" alt="" srcset="">FaceBook</p>
+            <p class="youtube"><img src="./SelectMenu_Img/youtube.png" alt="" srcset="">YouTube</p>
+            <p class="instagram"><img src="./SelectMenu_Img/instagram.png" alt="" srcset="">Instagram</p>
+            <p class="twitter" selected><img src="./SelectMenu_Img/twitter.png" alt="" srcset="">Twitter</p>
+            <p class="watsapp" selected><img src="./SelectMenu_Img/whatsapp.png" alt="" srcset="">Watsapp</p>
+        </div>
+                
+    </div>
+
+    <script>
+        const selectOption = document.querySelectorAll('.options');
+        const optionImg = document.querySelector('.option-img');
+        const selectText  = document.querySelector('.option-p');
+        const below = document.querySelectorAll('p');
+        const p = document.querySelectorAll('.below');
+
+
+        selectOption.forEach(select =>{
+            select.addEventListener('click', function(){
+                optionImg.classList.toggle('img-rotate');
+                p.forEach(b => b.classList.toggle('hide'));
+            });
+        })
+
+
+        below.forEach(item => {
+            item.addEventListener('click', function(){
+            
+                let pElement = this.textContent;
+                selectText.innerHTML = pElement;
+                p.forEach(b => b.classList.toggle('hide'));
+                optionImg.classList.toggle('img-rotate');
+            });
+        })
+
+
+     
+
+    </script>
+</body>
+</html>

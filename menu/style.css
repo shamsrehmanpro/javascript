@@ -1,0 +1,95 @@
+html{
+    background-color: rgb(167, 47, 4);
+    width: 100%;
+    height: 100%;
+}
+.main-div{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: sans-serif;
+}
+.options{
+ display: flex;
+ background-color: lightgray;
+ align-items: center;
+ gap: 80px;
+ padding: 10px 20px 10px 20px;
+ border-radius: 10px;
+ cursor: pointer;
+  
+}
+.option-p{
+    width: 200px;
+}
+
+.option-img{
+    width: 20px;
+    color: lightgray;
+    height: 20px;
+}
+.img-rotate{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+.option-p{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+.facebook{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.youtube{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.below p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.below p:hover{
+    background-color: white;
+}
+.instagram{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.twitter{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.watsapp{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+p img{
+    width: 20px;
+    height: 20px;
+}
+
+.below{
+    margin-top: 20px;
+    background-color: lightgray;
+    gap: 0px;
+    padding: 0 20px 0px 20px;
+    border-radius: 10px;
+    line-height: 0;
+    visibility: hidden;
+}
+.hide{
+    visibility: visible;
+}
+
+
+

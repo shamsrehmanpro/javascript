@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Form To Google Sheets Demo</title>
+  <meta name="description" content="Store HTML form submissions in Google Sheets">
+  <link href="./favicon.png" rel="shortcut icon">
+
+  <link rel="stylesheet" href="main.css">
+  
+</head>
+<body>
+
+  <div class="form-container">
+    <p>Comming Soon !</p>
+    <h1> Our Brand New <br>Website Is On Its Way</h1>
+    <form name="submit-to-google-sheet">
+      <input name="email" type="email" placeholder="Email" required>
+     <button type="submit"><img src="./images/send-icon.png" alt="" srcset=""></button>
+    </form>
+    <span></span>
+  </div>
+
+  
+  <script>
+   
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxyt0muVXsljcPcdCwjsLpp5bzKquvBfWEM86CzaGhUQbrO62AGEmyv4HcmPASZaI2u/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const message = document.querySelector('input');
+  const span = document.querySelector('span');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        span.innerHTML = 'your Information is submitted successfully';
+        setTimeout(() => {
+          
+          span.innerHTML = '';
+        }, 3000);
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+
+
+  </script>
+
+</body>
+</html>

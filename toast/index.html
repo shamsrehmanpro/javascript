@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8a3cfe6662.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container buttons">
+        <button class="success" onclick="createToast('success')" >Success</button>
+        <button class="error" onclick="createToast('error')">Error</button>
+        <button class="invalid" onclick="createToast('invalid')">Invalid</button>
+    </div>
+
+    <div class="toast-box">
+        <!-- <p>this is not yours</p>
+        <p>love your</p>
+        <p>this is not yours</p> -->
+
+    </div>
+
+
+  <script>
+    let toastBox = document.querySelector('.toast-box');
+    let buttons = document.querySelectorAll('.buttons');
+
+    function createToast(message){
+        let div = document.createElement('p');
+        div.innerHTML = message + ' is your message';
+        toastBox.appendChild(div);
+        let span = document.createElement('span');
+        span.innerHTML = 'X';
+        div.appendChild(span);
+        span.addEventListener('click', function(e){
+        e.target.parentElement.remove();
+    
+    }); 
+        if (message === 'error') {
+            div.classList.add('error');
+        }
+        if(message === 'invalid')
+        div.classList.add('invalid');
+    }
+
+  
+
+  </script>
+</body>
+</html>

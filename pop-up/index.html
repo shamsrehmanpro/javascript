@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="showpopup">Show Pop-UP</button>
+
+    <div class="pop-up">
+        <img src="./404-tick.png" alt="" srcset="">
+        <h1>Thank you</h1>
+        <p> Your detail has been successfully submitted. Thanks !</p>
+        <button class="ok">Ok</button>
+    </div>
+
+    <script>
+        const showPopUp = document.querySelector('.showpopup');
+        const popUpDiv = document.querySelector('.pop-up');
+        const remove = document.querySelector('.ok');
+
+        showPopUp.addEventListener('click', () => {
+            popUpDiv.classList.add('show');
+        });
+        remove.addEventListener('click', () =>{
+            popUpDiv.classList.remove('show');
+        });
+
+    </script>
+</body>
+</html>

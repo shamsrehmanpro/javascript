@@ -1,0 +1,78 @@
+html{
+    width: 100%;
+    height: 100%;
+    background-image: url('./background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+.main-div{
+    height: 100%;
+    padding-left: 200px;
+    font-family: sans-serif;
+    position: relative;
+
+}
+.l{
+    color: red;
+}
+.second-div{
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(50%);
+}
+h1{
+    font-size: 40px;
+}
+button{
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background-color: transparent;
+    border-color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+button img{
+    width: 20px;
+}
+.div-p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.timer{
+    display: flex;
+    gap: 20px;
+    width: 400px;
+}
+.days{
+    margin-top: 0;
+}
+.digits{
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+span img{
+    height: 280px;
+    width: 150px;
+    position: absolute;
+    right: 160px;
+    animation: move 3s linear infinite;
+}
+@keyframes move {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }

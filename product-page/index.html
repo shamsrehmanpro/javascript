@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="img-heading">
+            <img src="./image1.png" alt="" srcset="">
+            <div class="buttons">
+                <span><button class="active"></button></span>
+                <span><button class=""></button></span>
+                <span><button class=""></button></span>
+            </div>
+        </div>
+
+        <div class="detail-img">
+            <h1>Casual T Shirt</h1>
+            <h2>$15.00</h2>
+            <p class="percent">30% OFF</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                 eum atque minus rem est tenetur consequatur 
+            </p>
+            <div class="sizes">
+                <p class="size">Size </p>
+                <p class="active-size">S</p>
+                <p>M</p>
+                <p>L</p>
+                <p>XL</p>
+                <p>XXL</p>
+            </div>
+
+            <div class="colors">
+                <p class="color">Color </p>
+                <input type="radio" name="" id="green">
+                <input type="radio" name="" id="blue">
+                <input type="radio" name="" id="yellow">
+                <input type="radio" name="" id="pink">
+            </div>
+
+            <div class="quantities">
+                <p class="quantity">Quantity </p>
+               <input class="number" type="number" name="" id="">
+            </div>
+            <span class="buy">Buy Now</span>
+        </div>
+        
+    </div>
+    
+    <script>
+        const buttons = document.querySelectorAll('button');
+        const img = document.querySelector('img');
+
+
+        buttons[0].addEventListener('click', function(){
+            img.src = './image1.png';
+            for(btn of buttons){
+                btn.classList.remove('active');
+            }
+            buttons[0].classList.add('active');
+        });
+
+        buttons[1].addEventListener('click', function(){
+            img.src = './image2.png';
+            for(btn of buttons){
+                btn.classList.remove('active');
+            }
+            buttons[1].classList.add('active');
+        });
+
+        buttons[2].addEventListener('click', function(){
+            img.src = './image3.png';
+            for(btn of buttons){
+                btn.classList.remove('active');
+            }
+            buttons[2].classList.add('active');
+        });
+
+        const number = document.querySelector('.number');
+
+        if (number.value === '') {
+            number.value = 1;
+        }
+
+    </script>
+</body>
+</html>
